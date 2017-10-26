@@ -1,7 +1,9 @@
 <template>
   <div id="wrapper" v-loading="loading">
     <div class="user-block">
-      <user class="user" v-for="(user, index) in users" :key="index" :user="user" @click.native="handleUserSelect(user)"></user>
+      <user class="user" v-for="(user, index) in users" :key="index" :user="user"
+        @albumSelected="handleAlbumSelected(user)"
+        @postSelected="handlePostSelected(user)"></user>
       <div class="dummy-user" v-for="n in 5" :key="n"></div>
     </div>
   </div>
@@ -35,7 +37,7 @@ export default {
           this.loading = false
         })
     },
-    handleUserSelect (user) {
+    handlePostSelected (user) {
       this.$router.push({
         name: 'Posts',
         params: {
@@ -63,7 +65,6 @@ export default {
   box-shadow: 10px 10px 10px RGBA(131, 145, 165, 0.1);
   cursor: pointer;
   margin: 10px;
-  padding: 10px;
   border-radius: 10px;
   transition: all .3s;
 }
