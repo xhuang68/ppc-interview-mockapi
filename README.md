@@ -1,6 +1,8 @@
 # mockapi
 
-> A Vue.js project
+> PPC interview project demo.
+
+This demo is a [Vue.js](https://cn.vuejs.org/) project. The REST API service is powered by [JSONPlaceholder](http://jsonplaceholder.typicode.com/).
 
 ## Build Setup
 
